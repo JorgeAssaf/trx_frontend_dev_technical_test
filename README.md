@@ -1,32 +1,34 @@
-# Prueba Técnica - Desarrollador frontend
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-¡Bienvenido a la prueba técnica para el puesto de Desarrollador FrontEnd en Traxi!
+## Getting Started
 
-En esta prueba, tendrás la oportunidad de demostrar tus habilidades y conocimientos en el desarrollo de aplicaciones web. Asegúrate de leer detenidamente las instrucciones y los requisitos antes de comenzar.
+First, run the development server:
 
-Recuerda que esta prueba está diseñada para evaluar tus capacidades y experiencia, por lo que te recomendamos seguir las mejores prácticas de desarrollo y mantener un código limpio y bien estructurado.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-¡Buena suerte y esperamos ver tu talento en acción!
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Instrucciones
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1. Clona este repositorio en tu máquina local.
-2. Crea una nueva rama para trabajar en la prueba.
-3. Sigue las instrucciones proporcionadas en el archivo [challenge](challenge.md) para completar la prueba.
-4. Asegúrate de hacer commits frecuentes a medida que avanzas en el desarrollo.
-5. Una vez que hayas terminado, crea un pull request con tu solución hacia la rama principal del repositorio.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Requisitos
+## Learn More
 
-- Conocimientos en desarrollo web frontend utilizando:
-    - JavaScript y preferiblemente TypeScript.
-    - ReactJS y/o Next.js.
-- Familiaridad con el uso de herramientas de control de versiones como Git.
+To learn more about Next.js, take a look at the following resources:
 
-Si tienes alguna pregunta o necesitas aclaraciones, no dudes en comunicarte con nosotros. ¡Estamos aquí para ayudarte!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-¡Que tengas una excelente prueba técnica!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Atentamente,
-El equipo de enseñanza de Traxi ❤
-Traxi teach team ❤# trx_frontend_dev_technical_test
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

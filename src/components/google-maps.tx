@@ -1,0 +1,64 @@
+'use client'
+import { Coords, Feature } from '@/types/coords'
+import GoogleMapReact from 'google-map-react'
+import { Check } from 'lucide-react'
+
+const AnyReactComponent = ({
+  text,
+  lat,
+  lng,
+}: {
+  text: string
+  lat: number
+  lng: number
+}) => {
+  return (
+    <div>
+      <Check size={32} />
+      {text}
+    </div>
+  )
+}
+
+interface MapProps {
+  coords: Coords[]
+}
+const GoogleMaps = ({ coords }: { coords: any }) => {
+  console.log(coords)
+
+  return (
+    <div className='w-full h-[500px]'>
+      <GoogleMapReact
+        yesIWantToUseGoogleMapApiInternals
+        bootstrapURLKeys={{ key: 'AIzaSyDzdG9rfIoPYrSZKPfxDWZTY5kpYq2zl6A' }}
+        defaultCenter={{ lat: 19.54283, lng: -99.21323 }}
+        defaultZoom={11}>
+        {coords.features.map((coord: any, index: number) => {
+          if (coord.geometry.type === 'Point') {
+            return (
+              <AnyReactComponent
+                key={index}
+                lat={coord.geometry.coordinates[1]}
+                lng={coord.geometry.coordinates[0]}
+                text={coord.properties.name}
+              />
+            )
+          }
+          if (coord.geometry.type === 'LineString') {
+            for (let i = 0; i < coord.geometry.coordinates.length; i++) {
+              return (
+                <AnyReactComponent
+                  key={index}
+                  lat={coord.geometry.coordinates[i][1]}
+                  lng={coord.geometry.coordinates[i][0]}
+                  text={coord.properties.name}
+                />
+              )
+            }
+          }
+        })}
+      </GoogleMapReact>
+    </div>
+  )
+}
+export default GoogleMaps
